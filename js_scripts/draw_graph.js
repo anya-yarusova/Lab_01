@@ -4,17 +4,16 @@ const width = canvas.width;
 const height = canvas.height;
 const radius = width / 2.5;
 const arrow_size = 20;
-const axes_color = '#000';
-const figure_color = '#00f';
-const font_size = 10;
+const axes_color = '#8a7070';
+const figure_color = '#40495d';
 const mark_size = 30;
 
 function draw_marks() {
     ctx.beginPath();
     ctx.fillStyle = axes_color;
     ctx.strokeStyle = axes_color;
-    ctx.fillText('X', width - mark_size / 2, height / 2 - mark_size - mark_size / 2);
-    ctx.fillText('Y', width / 2 + mark_size + mark_size / 2, mark_size / 2);
+    ctx.fillText('X', width - mark_size / 2, height / 2 - mark_size);
+    ctx.fillText('Y', width / 2 + mark_size, mark_size / 2);
     ctx.fillText('-R', width / 2 - radius, height / 2 + mark_size + mark_size / 2);
     ctx.moveTo(width / 2 - radius, height / 2 + mark_size);
     ctx.lineTo(width / 2 - radius, height / 2 - mark_size);
@@ -45,6 +44,7 @@ function draw_marks() {
 function draw_axes() {
     ctx.beginPath();
     ctx.fillStyle = axes_color;
+    ctx.strokeStyle = axes_color;
     ctx.moveTo(width / 2, height);
     ctx.lineTo(width / 2, 0);
     ctx.lineTo(width / 2 - arrow_size, arrow_size);
@@ -82,12 +82,13 @@ function draw_cursor(e) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     draw_graph();
     ctx.beginPath();
-    ctx.fillStyle = '#f00';
+    ctx.fillStyle = '#78cbef';
     ctx.arc(e.offsetX, e.offsetY, 5, 0, 2 * Math.PI);
     ctx.fill();
 }
 
 export function graph() {
+    draw_graph();
     canvas.onmousedown = (event) => {
         const form = document.getElementById("form");
         const formData = new FormData(form);
@@ -98,11 +99,11 @@ export function graph() {
         data.append('x', x.toString());
         data.append('y', y.toString());
         data.append('r', r.toString());
-        fetch("http://localhost:63342/testing/submit.php", {
+        fetch("https://se.ifmo.ru/~s335149/Lab_01/submit.php", {
             method: "POST",
             body: data
         }).then(() => {
-            fetch('http://localhost:63342/testing/create_table.php')
+            fetch('https://se.ifmo.ru/~s335149/Lab_01/create_table.php')
                 .then(response => {
                     return response.text();
                 })
@@ -121,5 +122,4 @@ export function graph() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         draw_graph();
     }
-    draw_graph();
 }

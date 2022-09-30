@@ -32,7 +32,7 @@ else{
         if ($y >= -3 && $y <= 5 && $r >= 2 && $r <= 5) {
             $result = checkArea($x, $y, $r);
             $script_time = hrtime(true) - $start_time;
-            $script_time = $script_time / 1000000000;
+            $script_time = $script_time / 1000000;
             $script_time = round($script_time, 7);
             $output = array(
                 'x' => $x,

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lab_01</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<header>
+    <h1>Yarusova Anna Aleksandrovna</h1>
+    <h2>Group: P32151</h2>
+    <h2>Var: 1820</h2>
+</header>
+<main>
+    <div class="canvas">
+        <span>
+            <canvas id="graph" width="390" height="390"></canvas>
+        </span>
+    </div>
+    <div class="value_picker">
+        <form id="form" action="/submit.php" method="post">
+            <div class="value_picker_field">
+                <span class="label">X</span>
+                <div
+                        class="value_picker_element"
+                        id="input_x"
+                        style="display: inline"
+                >
+                    <input type="checkbox" name="x" class="x_checkbox" value="-4" id="-4">-4
+                    <input type="checkbox" name="x" class="x_checkbox" value="-3" id="-3">-3
+                    <input type="checkbox" name="x" class="x_checkbox" value="-2" id="-2">-2
+                    <input type="checkbox" name="x" class="x_checkbox" value="-1" id="-1">-1
+                    <input type="checkbox" name="x" class="x_checkbox" value="0" id="0">0
+                    <input type="checkbox" name="x" class="x_checkbox" value="1" id="1">1
+                    <input type="checkbox" name="x" class="x_checkbox" value="2" id="2">2
+                    <input type="checkbox" name="x" class="x_checkbox" value="3" id="3">3
+                    <input type="checkbox" name="x" class="x_checkbox" value="4" id="4">4
+                </div>
+                <span id="error_x_message" class="error"></span>
+            </div>
+            <div class="value_picker_field">
+                <span class="label">Y</span>
+                <input
+                        class="value_picker_element"
+                        type="text"
+                        name="y"
+                        id="y"
+                        placeholder="0"
+                        required
+                />
+                <span id="error_y_message" class="error"></span>
+            </div>
+            <div class="value_picker_field">
+                <span class="label">R</span>
+                <input
+                        class="value_picker_element"
+                        type="text"
+                        name="r"
+                        id="r"
+                        placeholder="0"
+                        required
+                />
+                <span id="error_r_message" class="error"></span>
+            </div>
+            <div class="buttons">
+                <button
+                        class="button"
+                        id="submit"
+                        type="button"
+                >
+                    Send
+                </button>
+                <br>
+                <button
+                        class="button"
+                        id="reset"
+                        type="button"
+                >
+                    Reset
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="table">
+        <table id="result_table">
+            <!-- <?php
+                    ?> -->
+
+        </table>
+    </div>
+
+</main>
+<script type="module" src="js_scripts/main.js"></script>
+</body>
+
+</html>

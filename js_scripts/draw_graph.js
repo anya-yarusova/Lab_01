@@ -99,11 +99,11 @@ export function graph() {
         data.append('x', x.toString());
         data.append('y', y.toString());
         data.append('r', r.toString());
-        fetch("https://se.ifmo.ru/~s335149/Lab_01/submit.php", {
+        fetch("https://se.ifmo.ru/~s335149/submit.php", {
             method: "POST",
             body: data
         }).then(() => {
-            fetch('https://se.ifmo.ru/~s335149/Lab_01/create_table.php')
+            fetch('https://se.ifmo.ru/~s335149/create_table.php')
                 .then(response => {
                     return response.text();
                 })

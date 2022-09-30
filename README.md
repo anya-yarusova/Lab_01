@@ -1,5 +1,5 @@
 # Lab_01
-[Лабораторная работа по программированию #1](https://se.ifmo.ru/~s335149/dist/index.html)
+[Лабораторная работа по программированию #1](https://se.ifmo.ru/~s335149/index.html)
 
 ## Задание
 <p align="center">

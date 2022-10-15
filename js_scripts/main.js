@@ -32,7 +32,6 @@ function reset_button() {
         fetch("https://se.ifmo.ru/~s335149/clear.php");
         update_table();
     });
-
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {

@@ -14,6 +14,9 @@
             font-family: sans-serif;
             background-color: #0c1116;
         }
+        .canvas {
+            padding-top: 15px;
+        }
         canvas {
             background: #161a23;
             font-size: 30px;
@@ -83,7 +86,6 @@
         .hit {
             background-color: #273f32;
         }
-
         .miss {
             background-color: #362222;
         }
@@ -119,11 +121,13 @@
         }
 
         .value_picker {
-            padding: 20px 0px;
+            padding-top: 130px;
+            padding-left : 130px;
         }
 
         #error_r_message, #error_y_message, #error_x_message {
             color: #da4f49;
+            padding-left: 15px;
         }
 
         .buttons {
@@ -147,7 +151,6 @@
             padding-right: 20px;
         }
 
-
     </style>
 </head>
 <body>
@@ -156,12 +159,10 @@
     <h2>Var: 1820</h2>
 </header>
 <main>
-    <div class="canvas" style="padding-top: 15px">
-        <span>
-            <canvas id="graph" width="390" height="390"></canvas>
-        </span>
+    <div class="canvas" style="display: inline-block; vertical-align:top">
+        <canvas id="graph" width="390" height="390"></canvas>
     </div>
-    <div class="value_picker">
+    <div class="value_picker" style="display: inline-block">
         <form id="form" action="/submit.php" method="post">
             <div class="value_picker_field">
                 <span class="label">X</span>

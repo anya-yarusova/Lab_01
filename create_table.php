@@ -10,9 +10,9 @@ if (isset($_SESSION['history'])) {
         echo '<td>' . $item['y'] . '</td>';
         echo '<td>' . $item['r'] . '</td>';
         if ($item['result']) {
-            echo '<td <p class="status hit">Hit </p></td>';
+            echo '<td><p class="status hit">Hit</p></td>';
         } else {
-            echo '<td> <p class="status miss">Miss</p></td>';
+            echo '<td><p class="status miss">Miss</p></td>';
         }
         echo '<td>' . date('Y-m-d H:i:s', $item['time']) . '</td>';
         echo '<td>' . $item['script_time'], ' ms' . '</td>';

@@ -3,7 +3,7 @@
 
 ## Задание
 <p align="center">
-    <img src = "https://github.com/anya-yarusova/Lab_01/blob/master/sources/areas.png"/>
+    <img src = "https://github.com/anya-yarusova/Web-ITMO/blob/master/lab-01/sources/areas.png"/>
 </p>
 
 Разработать PHP-скрипт, определяющий попадание точки на координатной плоскости в заданную область, и создать HTML-страницу, которая формирует данные для отправки их на обработку этому скрипту.
